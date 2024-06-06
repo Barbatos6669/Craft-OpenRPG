@@ -63,7 +63,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-If you have any questions, suggestions, or just want to say hi, feel free to reach out to me at [your.email@example.com].
+If you have any questions, suggestions, or just want to say hi, feel free to reach out to me at (https://discord.gg/N5qbuNnW).
 
 Let's build something amazing together!
 
