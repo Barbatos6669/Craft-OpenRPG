@@ -1,2 +1,6 @@
-﻿  Player.cpp
-C:\Users\Larry\Documents\Bit\cs5_spring2024\Week_15\CRAFT\Player.cpp(8,8): error C2563: mismatch in formal parameter list
+﻿  GameManager.cpp
+  main.cpp
+  Generating Code...
+  CRAFT.vcxproj -> C:\Users\Larry\Documents\Bit\Craft-OpenRPG\Debug\CRAFT.exe
+  'pwsh.exe' is not recognized as an internal or external command,
+  operable program or batch file.
