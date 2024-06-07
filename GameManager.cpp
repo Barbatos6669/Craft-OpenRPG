@@ -1,8 +1,31 @@
+/*
+	This code represents a C++ implementation of a game manager class. The GameManager
+	class provides methods for initializing, cleaning up, starting, pausing, resuming,
+	and ending the game. It also handles events, updates the game state, and renders the game objects.
+	The constructor initializes the game window with a specified size and title.
+	The destructor performs cleanup tasks when the class instance is destroyed.
+	The initialize method initializes game systems and resources, setting the game to running.
+	The cleanup method cleans up resources and sets the game to not running.
+	The startGame method starts the game loop, handling events, updating the game state,
+	and rendering the game objects. The loop continues as long as the game is running and not paused.
+	The pauseGame method pauses the game by setting the isPaused flag to true and the game state to Paused.
+	The resumeGame method resumes the game by setting the isPaused flag to false and the game state to Playing.
+	The endGame method ends the game by setting the isRunning flag to false and the game state to GameOver.
+	The handleEvents method handles events such as window closure. Currently,
+	it checks for the window close event and ends the game if the window is closed.
+	The update method updates the game state. Currently, it is empty and can be expanded to include game logic and calculations.
+	The render method clears the window, renders the game objects (placeholder), and displays the rendered frame.
+	The saveGame and loadGame methods are placeholders for saving and loading game data, respectively.
+	This code provides a basic structure for managing a game, handling events, updating the game state, and rendering the game objects. It can be expanded upon to add more functionality and game-specific logic.
+
+*/
+
 #include "GameManager.h"
 #include <iostream>
 #include <SFML/Window/VideoMode.hpp>
 #include <SFML/Window/WindowBase.hpp>
 #include <SFML/Window/Event.hpp>
+#include <SFML/Window/Keyboard.hpp>
 
 using namespace sf;
 using namespace std;
@@ -24,6 +47,7 @@ void GameManager::initialize()
 
 	// Initialize game systems and resources here
 	isRunning = true; // Set the game to running
+	player.initialize(); // Initialize the player object
 }
 
 void GameManager::cleanup()
@@ -31,6 +55,7 @@ void GameManager::cleanup()
 	cout << "Cleanup method called" << endl; // Output a message to the console for debugging purposes
 
 	// Cleanup resources here
+	player.cleanup(); // Cleanup the player object
 	isRunning = false; // Set the game to not running
 }
 
@@ -93,13 +118,30 @@ void GameManager::handleEvents()
 		{
 			endGame(); // End the game if the window is closed
 		}
-		// a placeholder for handling other events
+
+		// Handle Keyboard Input
+		if (event.type == Event::KeyPressed)
+		{
+			// Check for specific key presses
+			if (event.key.code == Keyboard::Escape)
+			{
+				if (isPaused)
+				{
+					resumeGame(); // Resume the game if paused
+				}
+				else
+				{
+					pauseGame(); // Pause the game if not paused
+				}
+			}
+		}
 	}
 }
 
 void GameManager::update()
 {
 	cout << "Update method called" << endl; // Output a message to the console for debugging purposes
+	player.update(); // Update the player object
 }
 
 void GameManager::render()
@@ -108,7 +150,7 @@ void GameManager::render()
 
 	window.clear(); // Clear the window
 
-	// Placeholder for rendering game objects
+	player.render(window); // Render the player object
 
 	window.display(); // Display the rendered frame
 }

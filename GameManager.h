@@ -12,6 +12,8 @@
 
 #include <SFML/Graphics/RenderWindow.hpp>
 
+#include "Player.h"
+
 class GameManager
 {
 	public:
@@ -57,6 +59,7 @@ class GameManager
 	bool isRunning; // Is the game running?
 	bool isPaused; // Is the game paused?
 	GameState currentGameState; // The current game state
+	Player player; // The player object
 };
 
 // Inline method implementations
