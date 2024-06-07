@@ -1,11 +1,13 @@
 #pragma once
 
 /*
-	Header file for the GameManager class.
+	Class Summary:
 
-	This class is responsible for managing the game loop, and the game state.
-	Including starting the game, updating the game, and ending the game.
-	Manages global game settings, and data.
+		GameManager class
+		- This class is used to manage the game
+		- The GameManager class is responsible for initializing, cleaning up, starting, pausing, resuming, and ending the game
+		- It handles events, updates the game state, renders the game state, and saves/loads the game state
+
 */
 
 #include <SFML/Graphics/RenderWindow.hpp>
@@ -13,6 +15,14 @@
 class GameManager
 {
 	public:
+
+	enum class GameState
+	{
+		MainMenu,
+		Playing,
+		Paused,
+		GameOver
+	};
 	// The constructor initializes the class, and the destructor ensures cleanup when the class instance is destroyed.
 	GameManager(); // Constructor
 	~GameManager(); // Destructor
@@ -38,8 +48,24 @@ class GameManager
 	void saveGame(); // Save the game state
 	void loadGame(); // Load the game state
 
+	// Getters and Setters for the current game state
+	GameState getGameState() const;
+	void setGameState(GameState gameState);
+
 	private:
-	sf::RenderWindow window;
-	bool isRunning;
-	bool isPaused;
+	sf::RenderWindow window; // The game window
+	bool isRunning; // Is the game running?
+	bool isPaused; // Is the game paused?
+	GameState currentGameState; // The current game state
 };
+
+// Inline method implementations
+inline GameManager::GameState GameManager::getGameState() const
+{
+	return currentGameState;
+}
+
+inline void GameManager::setGameState(GameState gameState)
+{
+	currentGameState = gameState;
+}
