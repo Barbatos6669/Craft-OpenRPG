@@ -76,7 +76,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Larry\Documents\Bit\Craft-OpenRPG\include;C:\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -93,7 +93,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>C:\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\Users\Larry\Documents\Bit\Craft-OpenRPG\include;C:\SFML-2.6.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -133,25 +133,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GameManager.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="src\GameManager.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Ability.h" />
-    <ClInclude Include="Armor.h" />
-    <ClInclude Include="CombatManager.h" />
-    <ClInclude Include="Enemy.h" />
-    <ClInclude Include="GameManager.h" />
-    <ClInclude Include="HUD.h" />
-    <ClInclude Include="Inventory.h" />
-    <ClInclude Include="Item.h" />
-    <ClInclude Include="NPC.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="Quest.h" />
-    <ClInclude Include="UIManager.h" />
-    <ClInclude Include="Weapon.h" />
-    <ClInclude Include="World.h" />
+    <ClInclude Include="include\Ability.h" />
+    <ClInclude Include="include\Armor.h" />
+    <ClInclude Include="include\CombatManager.h" />
+    <ClInclude Include="include\Enemy.h" />
+    <ClInclude Include="include\GameManager.h" />
+    <ClInclude Include="include\HUD.h" />
+    <ClInclude Include="include\Inventory.h" />
+    <ClInclude Include="include\Item.h" />
+    <ClInclude Include="include\NPC.h" />
+    <ClInclude Include="include\Player.h" />
+    <ClInclude Include="include\Quest.h" />
+    <ClInclude Include="include\UIManager.h" />
+    <ClInclude Include="include\Weapon.h" />
+    <ClInclude Include="include\World.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
