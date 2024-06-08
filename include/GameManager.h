@@ -13,6 +13,10 @@
 #include <SFML/Graphics/RenderWindow.hpp>
 
 #include "Player.h"
+#include "HUD.h"
+
+using namespace sf;
+using namespace std;
 
 class GameManager
 {
@@ -55,11 +59,12 @@ class GameManager
 	void setGameState(GameState gameState);
 
 	private:
-	sf::RenderWindow window; // The game window
+	RenderWindow window; // The game window
 	bool isRunning; // Is the game running?
 	bool isPaused; // Is the game paused?
 	GameState currentGameState; // The current game state
 	Player player; // The player object
+	HUD hud; // The HUD object
 };
 
 // Inline method implementations

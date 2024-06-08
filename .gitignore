@@ -1,0 +1,141 @@
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+*.elf
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+# Debug files
+*.dSYM/
+*.cvs/
+*.ncb
+*.sdf
+*.suo
+*.pdb
+*.idb
+
+# Visual Studio files
+.vscode/
+.idea/
+*.vcxproj.user
+*.vcxproj.filters
+.vs/
+*.VC.opendb
+*.VC.db
+ipch/
+*.sln
+*.suo
+*.user
+*.userosscache
+*.unsuccessfulbuild
+*.opensdf
+*.ttf
+*.psess
+*.vspx
+*.vsp
+*.vspscc
+*.tmh
+
+# Temporary files
+*.tmp
+*.log
+*.obj
+*.pch
+*.ilk
+*.aps
+*.ncb
+*.sbr
+*.sbl
+*.ipdb
+*.pgc
+*.pgd
+*.rsp
+*.root
+*.id
+*.idl
+*.ipch
+*.iobj
+*.ipdb
+*.tlog
+*.lastbuildstate
+*.clw
+
+# Project files
+*.vcproj
+*.vcxproj
+*.props
+
+# Ignore directories containing build artifacts
+Debug/
+Release/
+out/
+build/
+
+# Ignore directories containing generated code
+gen/
+
+# Ignore directories for personal settings
+.env/
+
+# Miscellaneous
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.orig
+*.swp
+*~
+
+# macOS specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Ignore specific directories
+CRAFT/
+x64/
+lib/
+
+# GitHub specific
+.github/

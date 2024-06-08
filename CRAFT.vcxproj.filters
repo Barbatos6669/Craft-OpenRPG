@@ -27,10 +27,13 @@
     <ClCompile Include="src\UIManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="HealthBar.cpp">
+    <ClCompile Include="include\HUD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="GameClock.cpp">
+    <ClCompile Include="src\HealthBar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameClock.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -77,10 +80,10 @@
     <ClInclude Include="include\World.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HealthBar.h">
+    <ClInclude Include="include\GameClock.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="GameClock.h">
+    <ClInclude Include="include\HealthBar.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

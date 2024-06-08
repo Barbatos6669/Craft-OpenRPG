@@ -133,21 +133,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GameClock.cpp" />
-    <ClCompile Include="HealthBar.cpp" />
+    <ClCompile Include="include\HUD.cpp" />
+    <ClCompile Include="src\GameClock.cpp" />
     <ClCompile Include="src\GameManager.cpp" />
+    <ClCompile Include="src\HealthBar.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\UIManager.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="GameClock.h" />
-    <ClInclude Include="HealthBar.h" />
     <ClInclude Include="include\Ability.h" />
     <ClInclude Include="include\Armor.h" />
     <ClInclude Include="include\CombatManager.h" />
     <ClInclude Include="include\Enemy.h" />
+    <ClInclude Include="include\GameClock.h" />
     <ClInclude Include="include\GameManager.h" />
+    <ClInclude Include="include\HealthBar.h" />
     <ClInclude Include="include\HUD.h" />
     <ClInclude Include="include\Inventory.h" />
     <ClInclude Include="include\Item.h" />

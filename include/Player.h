@@ -10,7 +10,7 @@
 #include <SFML/Graphics/RectangleShape.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
 
-#include "../HealthBar.h"
+#include "HealthBar.h"
 
 using namespace sf;
 
@@ -53,18 +53,23 @@ class Player
 	PlayerState getPlayerState() const;
 	void setPlayerState(PlayerState playerState);
 
+	// Getters and Setters for the player's health
+	int getHealth() const;
+	void setHealth(int health);
+	void takeDamage(int damage);
+	void heal(int amount);
+
 	private:
 	PlayerState currentPlayerState;
 	RectangleShape playerShape; // Simple shape to represent the player
 	float speed;
 
 	int health; // The player's health
+	int maxHealth; // The player's maximum health
 	int mana; // The player's mana
 	int experience; // The player's experience points
 	int level; // The player's level
 	int gold; // The player's gold
-
-	HealthBar healthBar; // The player's health bar
 };
 
 // Inline method implementations
@@ -76,4 +81,34 @@ inline Player::PlayerState Player::getPlayerState() const
 inline void Player::setPlayerState(PlayerState playerState)
 {
 	currentPlayerState = playerState;
+}
+
+inline int Player::getHealth() const
+{
+	return health;
+}
+
+inline void Player::setHealth(int health)
+{
+	health = health;
+}
+
+inline void Player::takeDamage(int damage)
+{
+	health -= damage;
+
+	if (health < 0)
+	{
+		health = 0;
+	}
+}
+
+inline void Player::heal(int amount)
+{
+	health += amount;
+
+	if (health > maxHealth)
+	{
+		health = maxHealth;
+	}
 }

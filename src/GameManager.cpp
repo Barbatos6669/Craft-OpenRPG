@@ -26,6 +26,7 @@
 #include <SFML/Window/WindowBase.hpp>
 #include <SFML/Window/Event.hpp>
 #include <SFML/Window/Keyboard.hpp>
+#include "HUD.h"
 
 using namespace sf;
 using namespace std;
@@ -49,6 +50,7 @@ void GameManager::initialize()
 	// Initialize game systems and resources here
 	isRunning = true; // Set the game to running
 	player.initialize(); // Initialize the player object
+	hud.initialize(); // Initialize the HUD object
 }
 
 void GameManager::cleanup()
@@ -57,6 +59,7 @@ void GameManager::cleanup()
 
 	// Cleanup resources here
 	player.cleanup(); // Cleanup the player object
+	hud.cleanup(); // Cleanup the HUD object
 	isRunning = false; // Set the game to not running
 }
 
@@ -143,6 +146,7 @@ void GameManager::update()
 {
 	// cout << "Update method called" << endl; // Output a message to the console for debugging purposes
 	player.update(); // Update the player object
+	hud.update(player.getHealth()); // Update the HUD with the player's health
 }
 
 void GameManager::render()
@@ -152,6 +156,8 @@ void GameManager::render()
 	window.clear(); // Clear the window
 
 	player.render(window); // Render the player object
+
+	hud.render(window); // Render the HUD object
 
 	window.display(); // Display the rendered frame
 }
