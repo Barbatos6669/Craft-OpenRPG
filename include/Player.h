@@ -7,8 +7,10 @@
 	Handles player movement, actions, and interactions.
 */
 
-#include <SFML/Graphics/RenderWindow.hpp>
 #include <SFML/Graphics/RectangleShape.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+
+#include "../HealthBar.h"
 
 using namespace sf;
 
@@ -55,6 +57,14 @@ class Player
 	PlayerState currentPlayerState;
 	RectangleShape playerShape; // Simple shape to represent the player
 	float speed;
+
+	int health; // The player's health
+	int mana; // The player's mana
+	int experience; // The player's experience points
+	int level; // The player's level
+	int gold; // The player's gold
+
+	HealthBar healthBar; // The player's health bar
 };
 
 // Inline method implementations

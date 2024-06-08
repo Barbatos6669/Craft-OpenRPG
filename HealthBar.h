@@ -17,7 +17,7 @@ class HealthBar
 	void initialize(const std::string& spriteSheetPath, int frameWidth, int frameHeight, int numFrames); // Initialize with sprite sheet
 	void cleanup(); // This method handles the cleanup of resources when the game ends.
 
-	void update(); // Update the game state
+	void update(int currentHealth); // Update the game state
 	void render(RenderWindow& window); // Render the game state
 
 	void setHealth(int health); // Set the health value

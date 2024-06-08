@@ -30,9 +30,10 @@
 using namespace sf;
 using namespace std;
 
-GameManager::GameManager() : window(sf::VideoMode(800, 600), "CRAFT-OpenRPG"), isRunning(false), isPaused(false), currentGameState(GameState::MainMenu)
+GameManager::GameManager() : window(VideoMode(800, 600), "CRAFT-OpenRPG"), isRunning(false), isPaused(false), currentGameState(GameState::MainMenu)
 {
 	cout << "GameManager constructor called" << endl;
+	window.setFramerateLimit(60); // Set the frame rate limit to 60 FPS
 }
 
 GameManager::~GameManager()
