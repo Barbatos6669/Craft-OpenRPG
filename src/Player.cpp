@@ -1,5 +1,5 @@
 #include "Player.h"
-#include "Player.h"
+
 #include <iostream>
 #include <SFML/Graphics/Color.hpp>
 #include <SFML/Graphics/RenderWindow.hpp>
