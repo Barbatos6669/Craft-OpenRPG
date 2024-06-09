@@ -1,11 +1,4 @@
-﻿  HUD.cpp
-  GameClock.cpp
-  GameManager.cpp
-  HealthBar.cpp
-  main.cpp
-  Player.cpp
-  UIManager.cpp
-  Generating Code...
+﻿  Player.cpp
   CRAFT.vcxproj -> C:\Users\Larry\Documents\Bit\Craft-OpenRPG\Debug\CRAFT.exe
   'pwsh.exe' is not recognized as an internal or external command,
   operable program or batch file.

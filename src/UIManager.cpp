@@ -1,8 +1,23 @@
+/*
+* UIManager.cpp
+* Contains the implementation of the UIManager class
+* Author: Barbatos6669
+* Last updated: 6/8/2024
+* Known issues: None
+*
+* This file contains the implementation of the UIManager class, which is responsible for
+* managing the user interface elements of the game.
+* The UIManager class is responsible for rendering the main menu, playing UI, paused UI, and game over UI.
+* The UIManager class is also responsible for handling user input for the UI elements.
+*/
+
+// Include the header file for the UIManager class
 #include "UIManager.h"
 #include <SFML/Graphics/RenderWindow.hpp>
 #include <iostream>
 #include <GameManager.h>
 
+// namespace
 using namespace sf;
 using namespace std;
 

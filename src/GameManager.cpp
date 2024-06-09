@@ -1,23 +1,12 @@
 /*
-	This code represents a C++ implementation of a game manager class. The GameManager
-	class provides methods for initializing, cleaning up, starting, pausing, resuming,
-	and ending the game. It also handles events, updates the game state, and renders the game objects.
-	The constructor initializes the game window with a specified size and title.
-	The destructor performs cleanup tasks when the class instance is destroyed.
-	The initialize method initializes game systems and resources, setting the game to running.
-	The cleanup method cleans up resources and sets the game to not running.
-	The startGame method starts the game loop, handling events, updating the game state,
-	and rendering the game objects. The loop continues as long as the game is running and not paused.
-	The pauseGame method pauses the game by setting the isPaused flag to true and the game state to Paused.
-	The resumeGame method resumes the game by setting the isPaused flag to false and the game state to Playing.
-	The endGame method ends the game by setting the isRunning flag to false and the game state to GameOver.
-	The handleEvents method handles events such as window closure. Currently,
-	it checks for the window close event and ends the game if the window is closed.
-	The update method updates the game state. Currently, it is empty and can be expanded to include game logic and calculations.
-	The render method clears the window, renders the game objects (placeholder), and displays the rendered frame.
-	The saveGame and loadGame methods are placeholders for saving and loading game data, respectively.
-	This code provides a basic structure for managing a game, handling events, updating the game state, and rendering the game objects. It can be expanded upon to add more functionality and game-specific logic.
-
+* GameManager.cpp
+* Contains the implementation of the GameManager class
+* Author: Barbatos6669
+* Last updated: 6/8/2024
+* Known issues: None
+*
+* This file contains the implementation of the GameManager class, which is responsible for
+* managing the game state and running the game loop.
 */
 
 #include "GameManager.h"
@@ -31,10 +20,13 @@
 using namespace sf;
 using namespace std;
 
-GameManager::GameManager() : window(VideoMode(800, 600), "CRAFT-OpenRPG"), isRunning(false), isPaused(false), currentGameState(GameState::MainMenu)
+GameManager::GameManager() 
+	: window(VideoMode(800, 600), "CRAFT-OpenRPG"), isRunning(false), isPaused(false), currentGameState(GameState::MainMenu)
 {
-	cout << "GameManager constructor called" << endl;
+	cout << "GameManager constructor called" << endl; // Output a message to the console for debugging purposes
+
 	window.setFramerateLimit(60); // Set the frame rate limit to 60 FPS
+	cout << "Frame rate limit set to 60 FPS" << endl; // Output a message to the console for debugging purposes
 }
 
 GameManager::~GameManager()
@@ -49,6 +41,8 @@ void GameManager::initialize()
 
 	// Initialize game systems and resources here
 	isRunning = true; // Set the game to running
+	cout << "Game is running" << endl; // Output a message to the console for debugging purposes
+
 	player.initialize(); // Initialize the player object
 	hud.initialize(); // Initialize the HUD object
 }
@@ -69,6 +63,7 @@ void GameManager::startGame()
 
 	isRunning = true; // Set the game to running
 	isPaused = false; // Set the game to not paused
+	cout << "Game is running" << endl; // Output a message to the console for debugging purposes
 
 	setGameState(GameState::Playing); // Set the game state to Playing
 
@@ -140,6 +135,9 @@ void GameManager::handleEvents()
 			}
 		}
 	}
+
+	player.handleEvents(); // Handle player-specific events
+	hud.handleEvents(event); // Handle HUD events
 }
 
 void GameManager::update()

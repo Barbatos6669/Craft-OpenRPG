@@ -1,8 +1,7 @@
 #pragma once
 
 /*
-	Ability class
+	placeholder class for Ability
 
-	- Base class for abilities or skills used in combat.
-	- Contains properties like damage, cooldown, and effects.
+	Contains ability-specific properties (damage, cooldown, etc.).
 */

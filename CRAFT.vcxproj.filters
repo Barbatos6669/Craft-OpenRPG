@@ -27,13 +27,13 @@
     <ClCompile Include="src\UIManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="include\HUD.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="src\HealthBar.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\GameClock.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HUD.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -89,6 +89,9 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\healthBar\healthBar_v1.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="assets\textures\player\idle\playerTest-Sheet.png">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>

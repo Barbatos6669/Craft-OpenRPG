@@ -1,6 +1,6 @@
 #pragma once
 #include <SFML/Graphics/RenderWindow.hpp>
-
+#include <SFML/Window/Event.hpp>
 #include "HealthBar.h"
 
 using namespace sf;
@@ -11,12 +11,14 @@ class HUD
 	HUD();
 	~HUD();
 
-	void initialize();
-	void cleanup();
+	void initialize(); // Initialize the HUD
+	void cleanup(); // Cleanup the HUD
 
-	void update(int health);
+	void handleEvents(Event event); // Handle events for the HUD
+
+	void update(int health); // Update the HUD
 	void render(RenderWindow& window); // Render the HUD to the screen
 
 	private:
-	HealthBar healthBar;
+	HealthBar healthBar; // The health bar for the player
 };

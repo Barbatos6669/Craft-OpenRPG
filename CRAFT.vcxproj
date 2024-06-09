@@ -133,10 +133,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="include\HUD.cpp" />
     <ClCompile Include="src\GameClock.cpp" />
     <ClCompile Include="src\GameManager.cpp" />
     <ClCompile Include="src\HealthBar.cpp" />
+    <ClCompile Include="src\HUD.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\UIManager.cpp" />
@@ -161,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="assets\textures\healthBar\healthBar_v1.png" />
+    <Image Include="assets\textures\player\idle\playerTest-Sheet.png" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
