@@ -14,6 +14,7 @@
 
 #include "Player.h"
 #include "HUD.h"
+#include "UIManager.h"
 
 using namespace sf;
 using namespace std;
@@ -64,7 +65,7 @@ class GameManager
 	bool isPaused; // Is the game paused?
 	GameState currentGameState; // The current game state
 	Player player; // The player object
-	HUD hud; // The HUD object
+	UIManager uiManager;
 };
 
 // Inline method implementations

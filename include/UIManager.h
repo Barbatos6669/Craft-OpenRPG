@@ -6,6 +6,9 @@
 #include <vector>
 #include <string>
 
+#include "HUD.h"
+#include <SFML/Window/Event.hpp>
+
 using namespace sf;
 using namespace std;
 
@@ -26,6 +29,8 @@ class UIManager
 
 	void initialize(); // This method is intended to set up the game, such as initializing game systems and resources.
 	void cleanup(); // This method handles the cleanup of resources when the game ends.
+	void handleEvents(Event event); // Processes global events such as player input and window events.
+	void update(int health);
 
 	void update(); // Update the game state
 	void render(RenderWindow& window); // Render the game state
@@ -43,6 +48,8 @@ class UIManager
 	void setupPlayingUI(); // Setup playing UI components
 	void setupPausedUI(); // Setup paused UI components
 	void setupGameOverUI(); // Setup game over UI components
+
+	HUD hud; // The HUD object
 };
 
 // Inline method implementations

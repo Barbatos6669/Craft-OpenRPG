@@ -21,7 +21,7 @@
 using namespace sf;
 using namespace std;
 
-Player::Player() : health(100), maxHealth(100), mana(100), experience(0), level(1), gold(0), speed(100.0f), frameWidth(64), frameHeight(64), currentFrame(0), frameDuration(0.15f)
+Player::Player() : health(100), maxHealth(100), mana(100), experience(0), level(1), gold(0), speed(100.0f), frameWidth(64), frameHeight(64), currentFrame(0), frameDuration(0.2f)
 {
 	playerShape.setSize(Vector2f(64, 64));
 	playerShape.setFillColor(Color::Green);
@@ -46,7 +46,9 @@ Player::~Player()
 
 void Player::initialize()
 {
-	cout << "Player initialize method called" << endl;
+	cout << "Player initialize method called" << endl; // Output a message to the console for debugging purposes
+
+	frameDuration = 0.1f; // Set the frame duration to 0.2 seconds
 
 	health = 100;
 	cout << "Player health set to 100" << endl;

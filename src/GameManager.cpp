@@ -16,11 +16,12 @@
 #include <SFML/Window/Event.hpp>
 #include <SFML/Window/Keyboard.hpp>
 #include "HUD.h"
+#include <UIManager.h>
 
 using namespace sf;
 using namespace std;
 
-GameManager::GameManager() 
+GameManager::GameManager()
 	: window(VideoMode(800, 600), "CRAFT-OpenRPG"), isRunning(false), isPaused(false), currentGameState(GameState::MainMenu)
 {
 	cout << "GameManager constructor called" << endl; // Output a message to the console for debugging purposes
@@ -44,7 +45,7 @@ void GameManager::initialize()
 	cout << "Game is running" << endl; // Output a message to the console for debugging purposes
 
 	player.initialize(); // Initialize the player object
-	hud.initialize(); // Initialize the HUD object
+	uiManager.initialize(); // Initialize the HUD object
 }
 
 void GameManager::cleanup()
@@ -53,7 +54,7 @@ void GameManager::cleanup()
 
 	// Cleanup resources here
 	player.cleanup(); // Cleanup the player object
-	hud.cleanup(); // Cleanup the HUD object
+	uiManager.cleanup(); // Cleanup the HUD object
 	isRunning = false; // Set the game to not running
 }
 
@@ -137,14 +138,14 @@ void GameManager::handleEvents()
 	}
 
 	player.handleEvents(); // Handle player-specific events
-	hud.handleEvents(event); // Handle HUD events
+	uiManager.handleEvents(event); // Handle HUD events
 }
 
 void GameManager::update()
 {
 	// cout << "Update method called" << endl; // Output a message to the console for debugging purposes
 	player.update(); // Update the player object
-	hud.update(player.getHealth()); // Update the HUD with the player's health
+	uiManager.update(player.getHealth()); // Update the HUD with the player's health
 }
 
 void GameManager::render()
@@ -155,7 +156,7 @@ void GameManager::render()
 
 	player.render(window); // Render the player object
 
-	hud.render(window); // Render the HUD object
+	uiManager.render(window); // Render the HUD object
 
 	window.display(); // Display the rendered frame
 }
