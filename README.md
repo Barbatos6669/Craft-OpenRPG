@@ -1,6 +1,6 @@
 # Craft-OpenRPG
 
-Welcome to Craft-OpenRPG! This is my first open-source RPG game project, featuring classic 16-bit graphics and built using C++. I'm excited to share my journey with you and would love to have contributions, advice, and feedback from the community.
+Welcome to Craft-OpenRPG! This is my first open-source RPG game project, featuring classic 64-bit graphics and built using C++. I'm excited to share my journey with you and would love to have contributions, advice, and feedback from the community.
 
 ## About the Project
 
@@ -13,7 +13,7 @@ Craft-OpenRPG is a top-down 16-bit RPG game that aims to provide a fun and engag
 - Enemies with combat capabilities
 - Items including weapons and armor
 - Basic combat system
-- Classic 16-bit graphics
+- Classic 64-bit graphics
 
 ## Getting Started
 
